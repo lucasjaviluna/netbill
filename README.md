@@ -21,6 +21,6 @@ Proyecto Net-Bill
 
          $ php artisan key:generate
 
-+ Listo ya podemos ejecutar el proyecto Cinema.
++ Listo ya podemos ejecutar el proyecto NetBill.
 
         $ php artisan serve
