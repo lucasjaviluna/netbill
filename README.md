@@ -10,7 +10,8 @@ Proyecto Net-Bill
 + Ejecutamos el siguiente comando.
 
         $ composer install
-    
+        $ composer update
+
 + Modificamos el nombre del archivo __.env.example.__ por __.env__ y agregamos nuestras credenciales.
 
 + Ejecutamos las migraciones.
