@@ -7,9 +7,11 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+                    <form class="form-horizontal" id="form-register" role="form" method="POST" action="{{ url('/register') }}">
+                    <!--<form class="form-horizontal" id="form-register" role="form">-->
                         {!! csrf_field() !!}
-
+                        <!--<input type="hidden" class="form-control" name="route" id='route' value="{{ url('/register') }}">-->
+                         <!--
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Name</label>
 
@@ -37,12 +39,12 @@
                                 @endif
                             </div>
                         </div>
-
+                        -->
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                <input type="text" class="form-control" name="email" value="{{ old('email') }}">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -87,7 +89,25 @@
                                 </button>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <!--
+                            <div class="col-md-6 col-md-offset-4">
+                                <div class="alert alert-success alert-dismissible" role="alert">
+                                    'Registro completo! <a href="{{ url('/login') }}">Ahora puedes iniciar sesión</a>'
+                                </div>
+                            </div>
+                            -->
+                            <div class="col-md-6 col-md-offset-4">
+                                @if(Session::has('message-register'))
+                                    <div class="alert alert-success alert-dismissible" role="alert">
+                                        {!! Session::get('message-register') !!}
+                                    </div>
+                                @endif
+                            </div>
+                        </div>
                     </form>
+                    <!--<button class="ladda-button" data-style="expand-right"><span class="ladda-label">Submit</span></button>-->
                 </div>
             </div>
         </div>
