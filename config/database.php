@@ -117,4 +117,9 @@ return [
 
     ],
 
+    'commons' => [
+        'masterSQLDump' => database_path().'/sql/dbMaster.sql',
+        'clientsSQLDump' => database_path().'/sql/dbClient.sql',
+    ]
+
 ];
